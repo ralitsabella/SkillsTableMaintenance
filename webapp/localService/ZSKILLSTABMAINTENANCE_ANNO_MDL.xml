@@ -1,0 +1,36 @@
+<edmx:Edmx xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx" Version="4.0">
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='LOCAL')/$value"><edmx:Include Namespace="com.sap.vocabularies.Common.v1" Alias="Common"/></edmx:Reference>
+	<edmx:Reference Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='LOCAL')/$value"><edmx:Include Namespace="com.sap.vocabularies.UI.v1" Alias="UI"/></edmx:Reference>
+	<edmx:Reference
+		Uri="../../catalogservice;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='LOCAL')/$value"><edmx:Include Namespace="com.sap.vocabularies.Communication.v1" Alias="Communication"/></edmx:Reference>
+	<edmx:Reference Uri="../../../sap/zskillstabmaintenance_srv/$metadata"><edmx:Include Namespace="ZSKILLSTABMAINTENANCE_SRV" Alias="SAP"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema xmlns="http://docs.oasis-open.org/odata/ns/edm" Namespace="zskillstabmaintenance_anno_mdl.v1">
+			<Annotations Target="ZSKILLSTABMAINTENANCE_SRV.ZI_SKILLS_MAINTType">
+				<Annotation Term="UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Skill Name"/><PropertyValue Property="TypeNamePlural" String="Skill Names"/></Record>
+				</Annotation>
+				<Annotation Term="UI.Identification">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Skill ID"/><PropertyValue Property="Value" Path="skill_id"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="skill_id"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="skill_name"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.LineItem">
+					<Collection>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="skill_id"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Value" Path="skill_name"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Skill ID"/><PropertyValue Property="Value" Path="skill_id"/></Record>
+						<Record Type="UI.DataField"><PropertyValue Property="Label" String="Skill Name"/><PropertyValue Property="Value" Path="skill_name"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="UI.SelectionFields">
+					<Collection>
+						<PropertyPath>skill_name</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>
